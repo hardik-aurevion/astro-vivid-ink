@@ -1,16 +1,34 @@
 ---
-
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/ui/Header.astro';
+import Footer from '../components/ui/Footer.astro';
+import ScrollToTop from '../components/ui/ScrollToTop.astro';
+import Hero from '../components/sections/Hero.astro';
+import GiftCard from '../components/sections/GiftCard.astro';
+import About from '../components/sections/About.astro';
+import Services from '../components/sections/Services.astro';
+import Studios from '../components/sections/Studios.astro';
+import Team from '../components/sections/Team.astro';
+import Facts from '../components/sections/Facts.astro';
+import Gallery from '../components/sections/Gallery.astro';
+import Map from '../components/sections/Map.astro';
+import Contact from '../components/sections/Contact.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Homepage - Vivid Ink Tattoos | The UK Tattoo Studios Chain">
+	<Header />
+	<main>
+		<Hero />
+		<GiftCard />
+		<About />
+		<Services />
+		<Studios />
+		<Team />
+		<Facts />
+		<Gallery />
+		<Map />
+		<Contact />
+	</main>
+	<Footer />
+	<ScrollToTop />
+</MainLayout>
