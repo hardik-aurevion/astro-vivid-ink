@@ -1,0 +1,60 @@
+---
+const portfolioItems = [
+	{ 
+		image: "https://vividinktattoos.co.uk/wp-content/uploads/bfi_thumb/Sean-Vivid-Ink-Tattoo-Limited-Birmingham6-q0jwlh45iwb6173n0gvqzopg734hc3h7prcdevk596-q0ql8d8j21b96uxvohwbsf5xfvq9fl438t78slmky0.jpg",
+		title: "Anime"
+	},
+	{ 
+		image: "https://vividinktattoos.co.uk/wp-content/uploads/bfi_thumb/Mel-Vivid-Ink-Tattoo-Limited-Stafford1-q0jwlh45iwb6173n0gvqzopg734hc3h7prcdevk596-q0qmfzwua71e39kdwutx0wt62qolptbk8rblpyxq4o.jpg",
+		title: "Anime, Neotraditional"
+	},
+	{ 
+		image: "https://vividinktattoos.co.uk/wp-content/uploads/bfi_thumb/Sean-Vivid-Ink-Tattoo-Limited-Birmingham7-q0jwlh45iwb6173n0gvqzopg734hc3h7prcdevk596-q0ql8d8j21b96uxvohwbsf5xfvq9fl438t78slmky0.jpg",
+		title: "Anime"
+	},
+	{ 
+		image: "https://vividinktattoos.co.uk/wp-content/uploads/bfi_thumb/Sean-Vivid-Ink-Tattoo-Limited-Birmingham5-q0jwlh45iwb6173n0gvqzopg734hc3h7prcdevk596-q0ql8d8j21b96uxvohwbsf5xfvq9fl438t78slmky0.jpg",
+		title: "Anime"
+	},
+];
+---
+
+<section class="py-16 md:py-24 bg-white">
+	<div class="container mx-auto px-4">
+		<div class="text-center mb-12">
+			<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Work</h2>
+			<p class="text-gray-600 max-w-3xl mx-auto">
+				Our studios provide tattoos of all varieties and complexities, from stunningly simple to highly elaborate pieces of art.<br/>
+				Feel free to take a look at the gallery below to discover some of our best work.<br/>
+				We create your tattoos, YOU MAKE THEM.
+			</p>
+		</div>
+
+		<!-- Portfolio Grid -->
+		<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
+			{portfolioItems.map((item) => (
+				<a href="#" class="group relative overflow-hidden rounded-lg">
+					<img 
+						src={item.image} 
+						alt={item.title}
+						class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+					/>
+					<div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+						<span class="text-white opacity-0 group-hover:opacity-100 transition-opacity font-semibold text-sm text-center px-2">
+							{item.title}
+						</span>
+					</div>
+				</a>
+			))}
+		</div>
+
+		<div class="text-center">
+			<a 
+				href="/our-portfolio/" 
+				class="inline-block bg-purple-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-purple-700 transition-colors"
+			>
+				View all
+			</a>
+		</div>
+	</div>
+</section>

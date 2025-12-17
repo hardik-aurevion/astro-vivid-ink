@@ -1,0 +1,134 @@
+---
+interface PricingTier {
+	title: string;
+	price: string;
+	description: string;
+	features: string[];
+	popular?: boolean;
+}
+
+interface Props {
+	tiers?: PricingTier[];
+}
+
+const defaultTiers: PricingTier[] = [
+	{
+		title: 'Small Tattoo',
+		price: '£50-£150',
+		description: 'Perfect for simple designs and small pieces',
+		features: [
+			'Up to 3 inches',
+			'Simple designs',
+			'1-2 hour session',
+			'Consultation included',
+		],
+	},
+	{
+		title: 'Medium Tattoo',
+		price: '£150-£400',
+		description: 'Ideal for medium-sized custom designs',
+		features: [
+			'3-6 inches',
+			'Custom designs',
+			'2-4 hour session',
+			'Free touch-up',
+			'Consultation included',
+		],
+		popular: true,
+	},
+	{
+		title: 'Large Tattoo',
+		price: '£400+',
+		description: 'Comprehensive pieces and full coverage',
+		features: [
+			'6+ inches',
+			'Complex custom designs',
+			'Multiple sessions',
+			'Free touch-ups',
+			'Design consultation',
+			'Payment plans available',
+		],
+	},
+];
+
+const { tiers = defaultTiers } = Astro.props;
+---
+
+<section class="py-16 lg:py-24 bg-white">
+	<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center mb-12">
+			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+				Pricing
+			</h2>
+			<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+				Transparent pricing for all tattoo sizes and styles
+			</p>
+		</div>
+		
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto">
+			{tiers.map((tier) => (
+				<article
+					class={`relative rounded-xl shadow-lg p-8 ${
+						tier.popular
+							? 'bg-blue-50 border-2 border-blue-500 scale-105'
+							: 'bg-white border border-gray-200'
+					}`}
+				>
+					{tier.popular && (
+						<div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+							<span class="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+								Most Popular
+							</span>
+						</div>
+					)}
+					
+					<h3 class="text-2xl font-bold text-gray-900 mb-2">{tier.title}</h3>
+					<div class="text-3xl font-bold text-blue-600 mb-4">{tier.price}</div>
+					<p class="text-gray-600 mb-6">{tier.description}</p>
+					
+					<ul class="space-y-3 mb-8">
+						{tier.features.map((feature) => (
+							<li class="flex items-start">
+								<svg
+									class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									aria-hidden="true"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M5 13l4 4L19 7"
+									/>
+								</svg>
+								<span class="text-gray-700">{feature}</span>
+							</li>
+						))}
+					</ul>
+					
+					<a
+						href="/contact"
+						class={`block w-full text-center py-3 rounded-lg font-semibold transition-colors ${
+							tier.popular
+								? 'bg-blue-600 text-white hover:bg-blue-700'
+								: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+						}`}
+					>
+						Get Started
+					</a>
+				</article>
+			))}
+		</div>
+		
+		<div class="mt-12 text-center text-gray-600">
+			<p class="text-sm">
+				* Prices are estimates. Final pricing depends on design complexity and size.
+				<br />
+				Contact us for a personalized quote.
+			</p>
+		</div>
+	</div>
+</section>
+

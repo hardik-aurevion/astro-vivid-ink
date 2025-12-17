@@ -1,0 +1,56 @@
+---
+const studios = [
+	{ name: "Moseley", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/06/Vivid-Ink-Tattoo-Studio-Moseley-Birmingham-1.jpg", link: "/studios/moseley/" },
+	{ name: "Stourbridge", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/07/stourbridge-vivid-ink-tattoos-1.jpg", link: "/studios/stourbridge/" },
+	{ name: "Derby", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/06/Vivid-Ink-Tattoo-Studio-Derby-Birmingham.jpg", link: "/studios/derby/" },
+	{ name: "Walsall", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/06/Vivid-Ink-Tattoo-Studio-Walsall-Birmingham.webp", link: "/studios/walsall/" },
+	{ name: "Sutton", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/06/Vivid-Ink-Tattoo-Limited-Sutton-Coldfield-Studio-2.jpg", link: "/studios/sutton/" },
+	{ name: "Hagley Rd", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/06/Vivid-Ink-Tattoo-Studio-Hagley-Road.jpg", link: "/studios/hagley-rd/" },
+	{ name: "Wolverhampton", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/06/Vivid-Ink-Tattoo-Studio-Wolverhampton-Birmingham.jpg", link: "/studios/wolverhampton/" },
+	{ name: "Shirley", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/06/Vivid-Ink-Tattoo-Studio-Shirley-2.jpg", link: "/studios/shirley/" },
+	{ name: "Worcester", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/06/Vivid-Ink-Tattoo-Studio-Worcester-Birmingham.jpg", link: "/studios/worcester/" },
+	{ name: "Coventry", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/06/Vivid-Ink-Tattoo-Studio-Coventry.jpg", link: "/studios/coventry/" },
+	{ name: "Lichfield", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/06/Lichfield-Vivid-Ink-Tattoo-Studio.jpg", link: "/studios/lichfield/" },
+	{ name: "Stafford", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/06/Vivid-Ink-Tattoo-Studio-Stafford-Birmingham.jpg", link: "/studios/stafford/" },
+	{ name: "Birmingham", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/06/Vivid-Ink-Tattoo-Studio-Birmingham-2.jpg", link: "/studios/birmingham/" },
+];
+---
+
+<section class="py-16 md:py-24 bg-purple-600 text-white">
+	<div class="container mx-auto px-4">
+		<div class="text-center mb-12">
+			<h2 class="text-3xl md:text-4xl font-bold mb-4">Our studios</h2>
+			<p class="text-lg max-w-3xl mx-auto opacity-90">
+				Our signature studios blend effortless style and luxury design, to create warm and welcoming environments. We want our clients to feel completely comfortable and relaxed within the distinctive surroundings of Vivid Ink. We go the extra mile to make you feel valued and special - and part of an extraordinary community.
+			</p>
+		</div>
+
+		<!-- Studios Grid -->
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
+			{studios.map((studio) => (
+				<a href={studio.link} class="group">
+					<div class="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+						<img 
+							src={studio.image} 
+							alt={`Vivid Ink Tattoo Studio ${studio.name}`}
+							class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+						/>
+						<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+						<div class="absolute bottom-0 left-0 right-0 p-4">
+							<h3 class="text-xl font-semibold text-white">{studio.name}</h3>
+						</div>
+					</div>
+				</a>
+			))}
+		</div>
+
+		<div class="text-center">
+			<a 
+				href="/studios/" 
+				class="inline-block bg-white text-purple-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
+			>
+				View all Studios
+			</a>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,47 @@
+---
+const teamMembers = [
+	{ name: "Georgia", role: "Body Piercer", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/06/georgia-small-stafford.jpg", link: "/artist/georgia-body-piercer/" },
+	{ name: "Rachel", role: "Studio Manager", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/07/Rachel-Vivid-Ink-Tattoo-Studio-Coventry-Artist.jpg", link: "/artist/rachel/" },
+	{ name: "Ella", role: "Tattoo Artist", image: "https://vividinktattoos.co.uk/wp-content/uploads/2025/05/Ella-Vivid-Ink-Tattoo-Artist-Sutton.jpg", link: "/artist/ella/" },
+	{ name: "Stefan", role: "Tattoo Artist", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/08/Stefan-Vivid-Ink-Tatoo-Studio-Moseley-Artist.jpg", link: "/artist/stefan/" },
+	{ name: "Denis", role: "Tattoo Artist", image: "https://vividinktattoos.co.uk/wp-content/uploads/2022/06/denis-wolves-2.jpg", link: "/artist/denis/" },
+];
+---
+
+<section class="py-16 md:py-24 bg-white">
+	<div class="container mx-auto px-4">
+		<div class="text-center mb-12">
+			<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our People</h2>
+			<p class="text-gray-600 max-w-3xl mx-auto">
+				The reason that Vivid Ink creates such outstanding tattoos is due to the array of talent within our studios. We have the most exceptional artists that are able to create hands down, some of the best work you'll ever see. There are 108 artists within Vivid Ink and we are confident we have the right artist to deliver an amazing tattoo that will change the way you see yourself.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+			{teamMembers.map((member) => (
+				<a href={member.link} class="group">
+					<div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+						<img 
+							src={member.image} 
+							alt={`${member.name} - ${member.role}`}
+							class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+						/>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
+							<p class="text-gray-600">{member.role}</p>
+						</div>
+					</div>
+				</a>
+			))}
+		</div>
+
+		<div class="text-center">
+			<a 
+				href="/finest-tattooing-artists/" 
+				class="inline-block bg-purple-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-purple-700 transition-colors"
+			>
+				View all team
+			</a>
+		</div>
+	</div>
+</section>

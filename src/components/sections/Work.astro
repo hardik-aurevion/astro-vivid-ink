@@ -1,0 +1,67 @@
+---
+---
+
+<section class="py-16 lg:py-24 bg-white">
+	<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="max-w-6xl mx-auto">
+			<h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-4 text-center">
+				OUR WORK
+			</h2>
+			<p class="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-8">
+				Browse our portfolio of stunning tattoo artwork across various styles and techniques.
+			</p>
+			
+			<!-- Category Filters -->
+			<div class="flex flex-wrap justify-center gap-3 mb-12">
+				<button class="px-6 py-2 bg-[#6B46C1] text-white rounded-lg font-semibold hover:bg-[#553C9A] transition-colors">
+					Home
+				</button>
+				<button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+					Black and Grey
+				</button>
+				<button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+					Colour
+				</button>
+				<button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+					Coverup
+				</button>
+				<button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+					Portrait
+				</button>
+				<button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+					Watercolour
+				</button>
+				<button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+					Other
+				</button>
+			</div>
+			
+			<!-- Image Gallery -->
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+				{Array.from({ length: 9 }).map((_, i) => (
+					<article class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+						<img
+							src={`https://images.unsplash.com/photo-${1600000000000 + i}?w=600&h=600&fit=crop&auto=format&q=80`}
+							alt={`Tattoo artwork ${i + 1}`}
+							loading="lazy"
+							decoding="async"
+							class="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+							width="600"
+							height="600"
+						/>
+					</article>
+				))}
+			</div>
+			
+			<div class="text-center">
+				<a 
+					href="/gallery" 
+					class="inline-block bg-black text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-colors"
+				>
+					VIEW ALL
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+

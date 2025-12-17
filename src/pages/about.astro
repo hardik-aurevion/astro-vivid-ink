@@ -1,0 +1,151 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/ui/Header.astro';
+import Footer from '../components/ui/Footer.astro';
+import Button from '../components/ui/Button.astro';
+---
+
+<MainLayout
+	title="About Us - Vivid Ink Tattoos | Our Story"
+	description="Learn about Vivid Ink Tattoos, our passion for tattoo artistry, and commitment to creating unique custom designs."
+>
+	<Header />
+	<main class="py-16 lg:py-24">
+		<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-4xl mx-auto">
+				<div class="text-center mb-12">
+					<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+						About Vivid Ink Tattoos
+					</h1>
+					<p class="text-xl text-gray-600">
+						Passionate artists dedicated to bringing your vision to life
+					</p>
+				</div>
+				
+				<div class="prose prose-lg max-w-none">
+					<section class="mb-12">
+						<h2 class="text-3xl font-bold text-gray-900 mb-4">Our Story</h2>
+						<p class="text-gray-700 mb-4 leading-relaxed">
+							Vivid Ink Tattoos was founded with a simple mission: to create exceptional tattoo art
+							that tells your unique story. Our team of experienced artists combines traditional
+							techniques with modern innovation to deliver stunning, custom designs.
+						</p>
+						<p class="text-gray-700 mb-4 leading-relaxed">
+							We believe that every tattoo should be a meaningful expression of who you are. That's
+							why we take the time to understand your vision, work with you to refine your design,
+							and ensure the final result exceeds your expectations.
+						</p>
+					</section>
+					
+					<section class="mb-12">
+						<h2 class="text-3xl font-bold text-gray-900 mb-4">Our Approach</h2>
+						<ul class="space-y-4 text-gray-700">
+							<li class="flex items-start">
+								<svg
+									class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									aria-hidden="true"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M5 13l4 4L19 7"
+									/>
+								</svg>
+								<span>
+									<strong class="text-gray-900">Consultation First:</strong> Every project begins
+									with a detailed consultation to understand your vision and requirements.
+								</span>
+							</li>
+							<li class="flex items-start">
+								<svg
+									class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									aria-hidden="true"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M5 13l4 4L19 7"
+									/>
+								</svg>
+								<span>
+									<strong class="text-gray-900">Custom Designs:</strong> All our work is
+									original and tailored specifically to you.
+								</span>
+							</li>
+							<li class="flex items-start">
+								<svg
+									class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									aria-hidden="true"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M5 13l4 4L19 7"
+									/>
+								</svg>
+								<span>
+									<strong class="text-gray-900">Premium Quality:</strong> We use only the
+									highest quality inks and maintain strict hygiene standards.
+								</span>
+							</li>
+							<li class="flex items-start">
+								<svg
+									class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									aria-hidden="true"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M5 13l4 4L19 7"
+									/>
+								</svg>
+								<span>
+									<strong class="text-gray-900">Aftercare Support:</strong> We provide
+									comprehensive aftercare instructions and follow-up support.
+								</span>
+							</li>
+						</ul>
+					</section>
+					
+					<section class="mb-12">
+						<h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
+						<p class="text-gray-700 mb-4 leading-relaxed">
+							With years of experience and a passion for excellence, we've built a reputation for
+							creating beautiful, meaningful tattoos that our clients love. Our commitment to quality,
+							attention to detail, and personalized service sets us apart.
+						</p>
+						<p class="text-gray-700 leading-relaxed">
+							Whether you're looking for a small, delicate piece or a large, intricate design, we're
+							here to help bring your vision to life. Contact us today to schedule a consultation
+							and start your tattoo journey.
+						</p>
+					</section>
+					
+					<div class="text-center">
+						<Button href="/contact" variant="primary" size="lg">
+							Book Your Consultation
+						</Button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<Footer />
+</MainLayout>
+
